@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.*?>
+
+<GridPane id="pane" fx:id="gridPane" alignment="CENTER" hgap="10.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="1080.0" prefWidth="1920.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <Label fx:id="H" GridPane.rowIndex="2" />
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1080.0" minWidth="10.0" prefWidth="1080.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="712.0" minHeight="10.0" prefHeight="712.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="72.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+  <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+    <children>
+      <LineChart fx:id="chart" layoutX="8.0" layoutY="19.0" prefHeight="657.0" prefWidth="834.0">
+        <xAxis>
+          <NumberAxis fx:id="xAxis" label="x" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" label="y" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="quitButton" layoutX="1011.0" layoutY="649.0" mnemonicParsing="false" onAction="#quit" text="Quit" />
+      <TextField fx:id="x0Input" layoutX="891.0" layoutY="150.0" prefWidth="152.0" promptText="" text="" />
+      <TextField id="XInput" fx:id="NInput" layoutX="891.0" layoutY="294.0" prefWidth="152.0" />
+      <TextField id="NInput" fx:id="y0Input" layoutX="891.0" layoutY="246.0" prefWidth="152.0" />
+      <Label layoutX="867.0" layoutY="153.0" text="x0" />
+      <Label layoutX="867.0" layoutY="202.0" text="X" />
+      <Label fx:id="N" layoutX="869.0" layoutY="300.0" text="N" />
+      <Button id="eulerPlot" fx:id="plotButton" layoutX="864.0" layoutY="372.0" mnemonicParsing="false" onAction="#plot" prefWidth="97.0" text="Plot" />
+      <TextField fx:id="XInput" layoutX="891.0" layoutY="199.0" prefWidth="152.0" />
+      <Label layoutX="864.0" layoutY="249.0" text="y0" />
+      <Button layoutX="969.0" layoutY="372.0" mnemonicParsing="false" onAction="#clear" prefWidth="97.0" text="Clear" />
+      <ChoiceBox fx:id="choiceBox" layoutX="864.0" layoutY="32.0" prefWidth="202.0">
+        <items>
+          <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Item 1" />
+            <String fx:value="Item 2" />
+            <String fx:value="Item 3" />
+          </FXCollections>
+        </items>
+      </ChoiceBox>
+      <TextField fx:id="NsInput" layoutX="891.0" layoutY="107.0" prefWidth="55.0" />
+      <TextField fx:id="NfInput" layoutX="984.0" layoutY="107.0" prefWidth="55.0001220703125" />
+      <Label fx:id="Ns" layoutX="866.0" layoutY="110.0" text="Ns" />
+      <Label fx:id="Nf" layoutX="959.0" layoutY="110.0" text="Nf" />
+      <Label fx:id="ch" layoutX="872.0" layoutY="36.0" minWidth="9.0" prefWidth="104.0" text="Choose a chart" />
+    </children>
+  </Pane>
+  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <children>
+      <Label layoutX="180.0" layoutY="10.0" prefHeight="39.90234375" prefWidth="721.0" text="Numerical methods for differential equations">
+        <font>
+          <Font name="System Bold Italic" size="30.0" />
+        </font>
+      </Label>
+    </children>
+  </Pane>
+</GridPane>
